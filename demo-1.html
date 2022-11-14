@@ -1,0 +1,97 @@
+<html>
+<head><title>calculator</title></head>
+<style type="text/css">
+table{
+	color: lime;
+}
+button{
+	width:justify;
+	border-radius: 2%;
+	background-color: black; 
+	color:lime ;
+}
+</style>
+<body>
+<script type="text/javascript">
+//###########################################################################################
+function nu1(argument) {
+var a1=parseInt(document.getElementById("num1").value);
+return a1;
+}
+function nu2 (argument) {
+var b1=parseInt(document.getElementById("num2").value);
+return b1;
+}
+function fi (argument) {
+	a=nu1();
+	b=nu2();
+}
+//###########################################################################################
+
+function addtion () {
+	fi();
+	//a=parseInt(a1); for type casting
+	//b=parseInt(b1);
+	return a+b;	
+}
+function su() {
+	fi();
+	return a-b;	
+}
+function mu (argument) {
+	fi();
+	return a*b;	
+}
+function di (argument) {
+	fi();
+	return a/b;	
+}
+function po (argument) {
+	fi();
+	return a**b;	
+}
+function sq (argument) {
+	a=nu1();
+	return a**(0.5);	
+}
+function log (argument) {
+	a=nu1();
+	return Math.log(a);	
+}
+function log2 (argument) {
+	a=nu1();
+	return Math.log2(a);	
+}
+</script>
+<table  align="center" bgcolor="red" border="10">
+<tr>
+<th bgcolor="black"><label>enter 1st number</label></th>
+<th><input type="text" name="a" id="num1"/ ></th>
+</tr>
+<tr>
+<th bgcolor="black"><label>enter 2nd number</label></th>
+<th><input type="text" name="b" id="num2"/></th>
+</tr>
+<tr>
+<th bgcolor="black"><label>answer</label></th>
+<th bgcolor="black"><p id="d">-</p></th>
+</tr>
+<tr>
+<th colspan=2>
+<button onclick='document.getElementById("d").innerHTML=addtion()'>addtion</button>
+<button onclick='document.getElementById("d").innerHTML=su()'>subtraction</button>
+<button onclick='document.getElementById("d").innerHTML=mu()'>multiplication</button>
+<button onclick='document.getElementById("d").innerHTML=di()'>division</button>
+</th>
+</tr>
+<tr>
+<th colspan=2>
+<button onclick='document.getElementById("d").innerHTML=po()'>power</button>
+<button onclick='document.getElementById("d").innerHTML=sq()'>root (of 1st number)</button>
+</th></tr>
+<tr >
+<th colspan=2><button onclick='document.getElementById("d").innerHTML=log()'>log base e (of 1st number)</button>
+<button onclick='document.getElementById("d").innerHTML=log2()'>log base 2 (of 1st number)</button></th>
+</tr>
+</table>
+</body>

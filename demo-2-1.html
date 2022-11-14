@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>user details</title>
+</head>
+<style type="text/css">
+.h {
+
+  display:none;
+
+}
+</style>
+<body>
+
+
+<button onClick="toggleTable()">Open Table</button>
+<br>
+<table id="D" style="width:50%" class="h" ALIGN="CENTER">
+
+  <tr>
+
+    <th>Firstname</th>
+
+    <th>Lastname</th> 
+
+    <th>Age</th>
+
+  </tr>
+</table>
+<script type="text/javascript">
+function toggleTable() {
+document.getElementById("D").classList.toggle("h");
+}
+</script>
+<p id="d">hello</p>
+</body>
+</html>

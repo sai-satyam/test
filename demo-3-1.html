@@ -1,0 +1,89 @@
+<html>
+<head><title>demo3.1</title></head>
+<body>
+	<table border="10" align="center" id="t2">
+		<tr>
+			<td><label>Name :</label></td>
+			<td><input type="text" id="f1" onfocus="value=''"/></td>
+		</tr>
+		<tr>
+			<td><label>Email :</label></td>
+			<td><input type="text" id="f2" onfocus="value=''"/></td>
+		</tr>
+		<tr>
+			<td><label>user name :</label></td>
+			<td><input type="text" id="f3" onfocus="value=''"/></td>
+		</tr>
+		<tr>
+			<td><label>password :</label></td>
+			<td><input type="TEXT" id="f4" onfocus="value=''"/></td>
+		</tr>
+		<tr>
+			<td><label>image</label></td>
+			<td align="center"><p id='r1'></p>
+				<button onclick="document.getElementById('r1').innerHTML=demo1()" onfocus="this.value=''">add image</button></td>
+		</tr>
+		<TR>
+			<TD colspan=2 align="center"><button onclick="demo()" > submit </button></TD>
+		</TR>
+	</table>
+
+	<br><br>
+	<table border=10 id="t1" align="center">
+		<tr>
+			<th>NAME</th>
+			<th>EMAIL</th>
+			<th>USER NAME</th>
+			<th>PASSWORD</th>
+			<th>IMAGE</th>
+		</tr>
+	</table>
+<!--input type="text" id="f3"/>
+<input type="text" id="f4"/-->
+
+<!--button onclick="document.getElementById('d').innerHTML=values()">click for values</button>
+<p id="d"></p-->
+<script type="text/javascript">
+/*function values (argument) {
+	var v1=document.getElementById('f1').value;
+	var v2=document.getElementById('f2').value;
+	var v3=document.getElementById('f3').value;
+	var v4=document.getElementById('f4').value;
+	return [v1,v2,v3,v4];
+}*/
+var count1=0;
+function demo1 (argument) {
+	var images=["<img src='https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8='/>","<img src='https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8='/>"];
+	return images[count1];
+}
+var count=1;
+var count2=0;
+function demo () {
+var images1=["<img src='https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8='/>","<img src='https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8='/>"];
+
+	var t=document.getElementById('t1');
+	var row=t.insertRow(count);
+	var c1=row.insertCell(0);
+	c1.innerHTML=document.getElementById('f1').value;
+	var c2=row.insertCell(1);
+	c2.innerHTML=document.getElementById('f2').value;
+	var c3=row.insertCell(2);
+	c3.innerHTML=document.getElementById('f3').value;
+	var c4=row.insertCell(3);
+	c4.innerHTML=document.getElementById('f4').value;
+
+	var c5=row.insertCell(4)
+	if (count2<=1) {
+		c5.innerHTML=images1[count2];}
+		else{
+			count2=0
+			c5.innerHTML=images1[count2];
+		}
+	
+	count2 +=1;
+	count=count+1;
+
+}
+</script>
+</body>
+</html>
