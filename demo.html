@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</head>
+<style>
+	#t{
+		text-align:center;
+		row-gap: 10px;
+		border-color: blueviolet;
+
+	}
+	.cla{
+		border: 6px solid orangered;
+		background-color:greenyellow;
+		}
+</style>
+<body>
+	<br><br>
+<table id="t" align="center" border="10" class="justfy">
+	<tr>
+		<th colspan="2" style="background-color:red;;color:black;">TODO LIST</th>
+	</tr>
+	<tr id='p'>
+		<td><input class="justfy" style="background-color: yellow;color:maroon;" type="text" placeholder="add task" id="t1" onfocus="value=''"></td>
+		<td><button style="background-color: maroon;color:yellow;" onclick="demo()">add task</button></td>
+	</tr>
+	<script type="text/javascript">
+		var count=2;
+		function demo(k) {
+			//var rw=k.parentNode.parentNode.rowIndex;
+			var e=document.getElementById('t');
+			var r1=e.insertRow(count);
+			var col=r1.insertCell(0);
+			//col.className="cla"
+			var col1=r1.insertCell(1);
+			//col1..className="cla"
+			//col.innerHTML="cell";
+			col.innerHTML=document.getElementById('t1').value;
+			col1.innerHTML='<button style="background-color:maroon;color:yellow;" onclick="del(this)">done</button>';
+			col.className="cla";
+			col1.className="cla";
+			count=count+1;
+
+		}
+		function del(r) {
+  var i = r.parentNode.parentNode.rowIndex;
+  document.getElementById("t").deleteRow(i);
+  count=count-1;
+}
+	</script>
+</table>
+</body>
+</html>
